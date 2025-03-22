@@ -1,0 +1,296 @@
+'use client';
+
+import { Box, Typography } from '@mui/material';
+import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot, TimelineOppositeContent } from '@mui/lab';
+import WorkIcon from '@mui/icons-material/Work';
+import BusinessIcon from '@mui/icons-material/Business';
+import CodeIcon from '@mui/icons-material/Code';
+import LanguageIcon from '@mui/icons-material/Language';
+
+// Define color scheme with improved colors
+const colors = {
+  primary: '#3f51b5', // Indigo
+  primaryLight: '#757de8',
+  primaryDark: '#002984',
+  secondary: '#f5f5f5', // Light gray
+  secondaryLight: '#ffffff',
+  secondaryDark: '#c2c2c2',
+  text: '#212121',
+  textLight: '#484848',
+  white: '#ffffff',
+  accent: '#ff4081' // Pink accent
+};
+
+interface ExperienceSectionProps {
+  experienceRef: React.RefObject<HTMLDivElement>;
+}
+
+export default function ExperienceSection({ experienceRef }: ExperienceSectionProps) {
+  return (
+    <Box ref={experienceRef} sx={{ py: 6, bgcolor: colors.white }}>
+      <Box sx={{ maxWidth: 1200, mx: 'auto', px: 3 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', mb: 4 }}>
+          <WorkIcon sx={{ color: colors.primary, mr: 1, fontSize: 32 }} />
+          <Typography variant="h4" sx={{ fontWeight: 'bold', color: colors.primary }}>
+            Work Experience
+          </Typography>
+        </Box>
+        
+        <Timeline position="alternate" sx={{ p: 0 }}>
+          {/* Bindzer Tech */}
+          <TimelineItem>
+            <TimelineOppositeContent sx={{ m: 'auto 0' }}>
+              <Typography variant="h6" component="span" sx={{ color: colors.primary, fontWeight: 'bold' }}>
+                2023 - Present
+              </Typography>
+              <Typography variant="body2" color="text.secondary">Full Stack Web Developer</Typography>
+            </TimelineOppositeContent>
+            
+            <TimelineSeparator>
+              <TimelineConnector sx={{ bgcolor: colors.primaryLight }} />
+              <TimelineDot sx={{ bgcolor: colors.primary }}>
+                <BusinessIcon />
+              </TimelineDot>
+              <TimelineConnector sx={{ bgcolor: colors.primaryLight }} />
+            </TimelineSeparator>
+            
+            <TimelineContent sx={{ 
+              py: 2, 
+              px: 2, 
+              bgcolor: colors.secondaryLight,
+              borderRadius: 2,
+              boxShadow: 1,
+              my: 2,
+              position: 'relative',
+              '&:before': {
+                content: '""',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: 4,
+                height: '100%',
+                bgcolor: colors.primary,
+                borderRadius: '4px 0 0 4px'
+              }
+            }}>
+              <Typography variant="h6" component="span" sx={{ fontWeight: 'bold' }}>
+                Bindzer Tech Co., Ltd.
+              </Typography>
+              <Typography variant="body2" sx={{ mb: 2 }}>Bangkok, Thailand</Typography>
+              <Typography variant="body1">
+                • Developed and maintained web applications with a focus on both front-end and back-end development.<br />
+                • Worked on product management systems using React, Node.js, and MongoDB.<br />
+                • Developed insurance quote systems for TQR Public Company Limited.
+              </Typography>
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5, mt: 2 }}>
+                <Box sx={{ 
+                  px: 1.5, 
+                  py: 0.5, 
+                  bgcolor: `${colors.primary}20`, 
+                  color: colors.primary,
+                  borderRadius: 5,
+                  fontSize: '0.75rem',
+                  fontWeight: 'medium',
+                  display: 'flex',
+                  alignItems: 'center'
+                }}>
+                  <CodeIcon sx={{ fontSize: '0.875rem', mr: 0.5 }} />
+                  React
+                </Box>
+                <Box sx={{ 
+                  px: 1.5, 
+                  py: 0.5, 
+                  bgcolor: `${colors.primary}20`, 
+                  color: colors.primary,
+                  borderRadius: 5,
+                  fontSize: '0.75rem',
+                  fontWeight: 'medium',
+                  display: 'flex',
+                  alignItems: 'center'
+                }}>
+                  <CodeIcon sx={{ fontSize: '0.875rem', mr: 0.5 }} />
+                  Node.js
+                </Box>
+                <Box sx={{ 
+                  px: 1.5, 
+                  py: 0.5, 
+                  bgcolor: `${colors.primary}20`, 
+                  color: colors.primary,
+                  borderRadius: 5,
+                  fontSize: '0.75rem',
+                  fontWeight: 'medium',
+                  display: 'flex',
+                  alignItems: 'center'
+                }}>
+                  <CodeIcon sx={{ fontSize: '0.875rem', mr: 0.5 }} />
+                  NestJS
+                </Box>
+              </Box>
+            </TimelineContent>
+          </TimelineItem>
+          
+          {/* Thathrit Co., Ltd. */}
+          <TimelineItem>
+            <TimelineOppositeContent sx={{ m: 'auto 0' }}>
+              <Typography variant="h6" component="span" sx={{ color: colors.primary, fontWeight: 'bold' }}>
+                2020 - 2022
+              </Typography>
+              <Typography variant="body2" color="text.secondary">Web Developer</Typography>
+            </TimelineOppositeContent>
+            
+            <TimelineSeparator>
+              <TimelineConnector sx={{ bgcolor: colors.primaryLight }} />
+              <TimelineDot sx={{ bgcolor: colors.primary }}>
+                <LanguageIcon />
+              </TimelineDot>
+              <TimelineConnector sx={{ bgcolor: colors.primaryLight }} />
+            </TimelineSeparator>
+            
+            <TimelineContent sx={{ 
+              py: 2, 
+              px: 2, 
+              bgcolor: colors.secondaryLight,
+              borderRadius: 2,
+              boxShadow: 1,
+              my: 2,
+              position: 'relative',
+              '&:before': {
+                content: '""',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: 4,
+                height: '100%',
+                bgcolor: colors.primary,
+                borderRadius: '4px 0 0 4px'
+              }
+            }}>
+              <Typography variant="h6" component="span" sx={{ fontWeight: 'bold' }}>
+                Thathrit Co., Ltd.
+              </Typography>
+              <Typography variant="body2" sx={{ mb: 2 }}>Bangkok, Thailand</Typography>
+              <Typography variant="body1">
+                • Developed a marketplace platform and engagement/advertising systems.<br />
+                • Utilized Nuxt.js for frontend and Laravel for backend development.<br />
+                • Implemented Docker for containerization and deployment.
+              </Typography>
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5, mt: 2 }}>
+                <Box sx={{ 
+                  px: 1.5, 
+                  py: 0.5, 
+                  bgcolor: `${colors.primary}20`, 
+                  color: colors.primary,
+                  borderRadius: 5,
+                  fontSize: '0.75rem',
+                  fontWeight: 'medium',
+                  display: 'flex',
+                  alignItems: 'center'
+                }}>
+                  <CodeIcon sx={{ fontSize: '0.875rem', mr: 0.5 }} />
+                  Nuxt.js
+                </Box>
+                <Box sx={{ 
+                  px: 1.5, 
+                  py: 0.5, 
+                  bgcolor: `${colors.primary}20`, 
+                  color: colors.primary,
+                  borderRadius: 5,
+                  fontSize: '0.75rem',
+                  fontWeight: 'medium',
+                  display: 'flex',
+                  alignItems: 'center'
+                }}>
+                  <CodeIcon sx={{ fontSize: '0.875rem', mr: 0.5 }} />
+                  Laravel
+                </Box>
+                <Box sx={{ 
+                  px: 1.5, 
+                  py: 0.5, 
+                  bgcolor: `${colors.primary}20`, 
+                  color: colors.primary,
+                  borderRadius: 5,
+                  fontSize: '0.75rem',
+                  fontWeight: 'medium',
+                  display: 'flex',
+                  alignItems: 'center'
+                }}>
+                  <CodeIcon sx={{ fontSize: '0.875rem', mr: 0.5 }} />
+                  Docker
+                </Box>
+              </Box>
+            </TimelineContent>
+          </TimelineItem>
+          
+          {/* Previous experiences in shorter format */}
+          <TimelineItem>
+            <TimelineOppositeContent sx={{ m: 'auto 0' }}>
+              <Typography variant="h6" component="span" sx={{ color: colors.primary, fontWeight: 'bold' }}>
+                Apr 2020 - Aug 2020
+              </Typography>
+              <Typography variant="body2" color="text.secondary">Web Developer</Typography>
+            </TimelineOppositeContent>
+            
+            <TimelineSeparator>
+              <TimelineConnector sx={{ bgcolor: colors.primaryLight }} />
+              <TimelineDot sx={{ bgcolor: colors.primary }}>
+                <BusinessIcon />
+              </TimelineDot>
+              <TimelineConnector sx={{ bgcolor: colors.primaryLight }} />
+            </TimelineSeparator>
+            
+            <TimelineContent sx={{ 
+              py: 2, 
+              px: 2, 
+              bgcolor: colors.secondaryLight,
+              borderRadius: 2,
+              boxShadow: 1,
+              my: 2
+            }}>
+              <Typography variant="h6" component="span" sx={{ fontWeight: 'bold' }}>
+                Powermatic Co. Ltd
+              </Typography>
+              <Typography variant="body2" sx={{ mb: 1 }}>Bangkok, Thailand</Typography>
+              <Typography variant="body1">
+                Developed web and mobile applications for various clients.
+              </Typography>
+            </TimelineContent>
+          </TimelineItem>
+          
+          <TimelineItem>
+            <TimelineOppositeContent sx={{ m: 'auto 0' }}>
+              <Typography variant="h6" component="span" sx={{ color: colors.primary, fontWeight: 'bold' }}>
+                Jul 2018 - Feb 2020
+              </Typography>
+              <Typography variant="body2" color="text.secondary">Web Developer</Typography>
+            </TimelineOppositeContent>
+            
+            <TimelineSeparator>
+              <TimelineConnector sx={{ bgcolor: colors.primaryLight }} />
+              <TimelineDot sx={{ bgcolor: colors.primary }}>
+                <LanguageIcon />
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            
+            <TimelineContent sx={{ 
+              py: 2, 
+              px: 2, 
+              bgcolor: colors.secondaryLight,
+              borderRadius: 2,
+              boxShadow: 1,
+              my: 2
+            }}>
+              <Typography variant="h6" component="span" sx={{ fontWeight: 'bold' }}>
+                Zawanna Technology Co., Ltd.
+              </Typography>
+              <Typography variant="body2" sx={{ mb: 1 }}>Bangkok, Thailand</Typography>
+              <Typography variant="body1">
+                Focused on web and mobile application development using various technologies.
+              </Typography>
+            </TimelineContent>
+          </TimelineItem>
+        </Timeline>
+      </Box>
+    </Box>
+  );
+}

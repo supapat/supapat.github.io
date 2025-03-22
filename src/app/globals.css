@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f9fa;
+  --foreground: #2c3e50;
+  --primary: #5e72e4;
+  --primary-light: #7795f8;
+  --primary-dark: #324cdd;
+  --secondary: #f5365c;
+  --secondary-light: #f56f91;
+  --secondary-dark: #d40b33;
+  --accent: #11cdef;
+  --text-primary: #2c3e50;
+  --text-secondary: #546e7a;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121212;
+    --foreground: #f5f5f5;
+    --primary: #7795f8;
+    --primary-light: #a3b9ff;
+    --primary-dark: #5e72e4;
+    --secondary: #f56f91;
+    --secondary-light: #ff8cac;
+    --secondary-dark: #f5365c;
+    --accent: #11cdef;
+    --text-primary: #f5f5f5;
+    --text-secondary: #b0bec5;
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.section-title {
+  position: relative;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--accent);
+}
+
+.section-subtitle {
+  color: var(--secondary);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.contact-info {
+  background-color: var(--secondary-dark);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 0 0 12px 12px;
+}
+
+.skill-tag {
+  background-color: var(--primary-light);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  font-size: 0.875rem;
+}
+
+.skill-chip {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.skill-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card {
+  border-left: 3px solid var(--primary);
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
